@@ -1,0 +1,49 @@
+% Alternative Beamer Color Theme
+% beamercolorthemecustom-alt.sty
+
+\mode<presentation>
+
+% Define custom colors - Dark Teal & Terracotta Palette
+\definecolor{primarycolor}{RGB}{0, 77, 64} % Dark Teal
+\definecolor{secondarycolor}{RGB}{214, 90, 49} % Terracotta
+\definecolor{accentcolor}{RGB}{251, 176, 59} % Amber
+\definecolor{backgroundcolor}{RGB}{245, 245, 245} % Light Gray
+\definecolor{textcolor}{RGB}{51, 51, 51} % Dark Gray
+
+% Set basic colors
+\setbeamercolor{background canvas}{bg=backgroundcolor}
+\setbeamercolor{normal text}{fg=textcolor}
+\setbeamercolor{structure}{fg=primarycolor}
+
+% Title and header colors
+\setbeamercolor{title}{fg=primarycolor}
+\setbeamercolor{frametitle}{fg=primarycolor}
+\setbeamercolor{titlelike}{fg=primarycolor}
+
+% Block colors
+\setbeamercolor{block title}{bg=primarycolor, fg=white}
+\setbeamercolor{block body}{bg=white, fg=textcolor}
+
+% Alert block colors
+\setbeamercolor{block title alerted}{bg=secondarycolor, fg=white}
+\setbeamercolor{block body alerted}{bg=white, fg=textcolor}
+
+% Example block colors
+\setbeamercolor{block title example}{bg=accentcolor, fg=textcolor}
+\setbeamercolor{block body example}{bg=white, fg=textcolor}
+
+% Items colors
+\setbeamercolor{alerted text}{fg=secondarycolor}
+\setbeamercolor{itemize item}{fg=secondarycolor}
+\setbeamercolor{itemize subitem}{fg=secondarycolor}
+\setbeamercolor{itemize subsubitem}{fg=secondarycolor}
+\setbeamercolor{enumerate item}{fg=secondarycolor}
+\setbeamercolor{enumerate subitem}{fg=secondarycolor}
+\setbeamercolor{enumerate subsubitem}{fg=secondarycolor}
+
+% Button and other UI elements
+\setbeamercolor{button}{bg=accentcolor, fg=textcolor}
+\setbeamercolor{section in toc}{fg=primarycolor}
+\setbeamercolor{subsection in toc}{fg=secondarycolor}
+
+\mode<all>

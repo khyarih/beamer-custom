@@ -1,0 +1,49 @@
+% Minimal Beamer Color Theme
+% beamercolorthemecustom-minimal.sty
+
+\mode<presentation>
+
+% Define custom colors - Minimal Monochrome Palette with Single Accent
+\definecolor{primarycolor}{RGB}{55, 55, 55} % Dark Gray
+\definecolor{secondarycolor}{RGB}{231, 76, 60} % Coral Red Accent
+\definecolor{accentcolor}{RGB}{231, 76, 60} % Same as secondary (for consistency)
+\definecolor{backgroundcolor}{RGB}{255, 255, 255} % Pure White
+\definecolor{textcolor}{RGB}{55, 55, 55} % Dark Gray
+
+% Set basic colors
+\setbeamercolor{background canvas}{bg=backgroundcolor}
+\setbeamercolor{normal text}{fg=textcolor}
+\setbeamercolor{structure}{fg=primarycolor}
+
+% Title and header colors
+\setbeamercolor{title}{fg=primarycolor}
+\setbeamercolor{frametitle}{fg=primarycolor}
+\setbeamercolor{titlelike}{fg=primarycolor}
+
+% Block colors
+\setbeamercolor{block title}{bg=primarycolor, fg=white}
+\setbeamercolor{block body}{bg=white, fg=textcolor}
+
+% Alert block colors
+\setbeamercolor{block title alerted}{bg=secondarycolor, fg=white}
+\setbeamercolor{block body alerted}{bg=white, fg=textcolor}
+
+% Example block colors
+\setbeamercolor{block title example}{bg=primarycolor!70, fg=white}
+\setbeamercolor{block body example}{bg=white, fg=textcolor}
+
+% Items colors
+\setbeamercolor{alerted text}{fg=secondarycolor}
+\setbeamercolor{itemize item}{fg=secondarycolor}
+\setbeamercolor{itemize subitem}{fg=secondarycolor}
+\setbeamercolor{itemize subsubitem}{fg=secondarycolor}
+\setbeamercolor{enumerate item}{fg=secondarycolor}
+\setbeamercolor{enumerate subitem}{fg=secondarycolor}
+\setbeamercolor{enumerate subsubitem}{fg=secondarycolor}
+
+% Button and other UI elements
+\setbeamercolor{button}{bg=secondarycolor, fg=white}
+\setbeamercolor{section in toc}{fg=primarycolor}
+\setbeamercolor{subsection in toc}{fg=primarycolor!80}
+
+\mode<all>

@@ -1,0 +1,44 @@
+% Custom Beamer Outer Theme
+% beameroutertemplatecustom.sty
+
+\mode<presentation>
+
+\RequirePackage{tikz}
+
+% Frame title
+\defbeamertemplate*{frametitle}{custom}{
+  \vspace*{0.5cm}
+  \begin{beamercolorbox}[ht=1.5cm,leftskip=1.5cm,rightskip=1.5cm]{frametitle}
+    \usebeamerfont{frametitle}\insertframetitle
+    \vspace*{0.1cm}
+    \begin{tikzpicture}
+      \draw[secondarycolor, line width=2pt] (0,0) -- (2,0);
+    \end{tikzpicture}
+  \end{beamercolorbox}
+}
+
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% Custom footer
+\defbeamertemplate*{footline}{custom}{
+  \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,leftskip=.4cm,rightskip=.4cm]{block title}
+    \hfill\insertframenumber{} / \inserttotalframenumber
+  \end{beamercolorbox}
+}
+
+% Sidebar if needed
+\defbeamertemplate*{sidebar right}{custom}{}
+\defbeamertemplate*{sidebar left}{custom}{}
+
+% Background
+\defbeamertemplate*{background}{custom}{
+  % Empty background - uses background color set in color theme
+}
+
+% Headline (if needed)
+\defbeamertemplate*{headline}{custom}{
+  % Empty headline
+}
+
+\mode<all>

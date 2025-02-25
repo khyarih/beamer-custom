@@ -1,0 +1,49 @@
+% Modern Beamer Color Theme
+% beamercolorthemecustom-modern.sty
+
+\mode<presentation>
+
+% Define custom colors - Modern Dark Purple & Mint Palette
+\definecolor{primarycolor}{RGB}{75, 0, 130} % Indigo
+\definecolor{secondarycolor}{RGB}{0, 179, 152} % Mint
+\definecolor{accentcolor}{RGB}{255, 105, 180} % Hot Pink
+\definecolor{backgroundcolor}{RGB}{252, 252, 252} % Off White
+\definecolor{textcolor}{RGB}{40, 40, 40} % Almost Black
+
+% Set basic colors
+\setbeamercolor{background canvas}{bg=backgroundcolor}
+\setbeamercolor{normal text}{fg=textcolor}
+\setbeamercolor{structure}{fg=primarycolor}
+
+% Title and header colors
+\setbeamercolor{title}{fg=primarycolor}
+\setbeamercolor{frametitle}{fg=primarycolor}
+\setbeamercolor{titlelike}{fg=primarycolor}
+
+% Block colors
+\setbeamercolor{block title}{bg=primarycolor, fg=white}
+\setbeamercolor{block body}{bg=white, fg=textcolor}
+
+% Alert block colors
+\setbeamercolor{block title alerted}{bg=accentcolor, fg=white}
+\setbeamercolor{block body alerted}{bg=white, fg=textcolor}
+
+% Example block colors
+\setbeamercolor{block title example}{bg=secondarycolor, fg=white}
+\setbeamercolor{block body example}{bg=white, fg=textcolor}
+
+% Items colors
+\setbeamercolor{alerted text}{fg=accentcolor}
+\setbeamercolor{itemize item}{fg=secondarycolor}
+\setbeamercolor{itemize subitem}{fg=secondarycolor}
+\setbeamercolor{itemize subsubitem}{fg=secondarycolor}
+\setbeamercolor{enumerate item}{fg=secondarycolor}
+\setbeamercolor{enumerate subitem}{fg=secondarycolor}
+\setbeamercolor{enumerate subsubitem}{fg=secondarycolor}
+
+% Button and other UI elements
+\setbeamercolor{button}{bg=secondarycolor, fg=white}
+\setbeamercolor{section in toc}{fg=primarycolor}
+\setbeamercolor{subsection in toc}{fg=secondarycolor}
+
+\mode<all>

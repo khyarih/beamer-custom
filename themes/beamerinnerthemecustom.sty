@@ -1,0 +1,86 @@
+% Custom Beamer Inner Theme
+% beamerinnertemplatecustom.sty
+
+\mode<presentation>
+
+\RequirePackage{tikz}
+
+% Title page
+\defbeamertemplate*{title page}{custom}{
+  \begin{center}
+    \vspace*{1cm}
+    {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle}\\
+    \vspace*{0.5cm}
+    {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle}\\
+    \vspace*{1cm}
+    {\usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor}\\
+    \vspace*{0.5cm}
+    {\usebeamerfont{institute}\usebeamercolor[fg]{institute}\insertinstitute}\\
+    \vspace*{0.5cm}
+    {\usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate}\\
+    \vspace*{1cm}
+    \begin{tikzpicture}
+      \draw[primarycolor, line width=3pt] (0,0) -- (4,0);
+    \end{tikzpicture}
+  \end{center}
+}
+
+% Itemize items
+\setbeamertemplate{itemize item}{\color{secondarycolor}$\bullet$}
+\setbeamertemplate{itemize subitem}{\color{secondarycolor}$\circ$}
+\setbeamertemplate{itemize subsubitem}{\color{secondarycolor}$\diamond$}
+
+% Enumerate items
+\setbeamertemplate{enumerate item}{\color{secondarycolor}\insertenumlabel.}
+\setbeamertemplate{enumerate subitem}{\color{secondarycolor}\insertenumlabel.\insertsubenumlabel}
+\setbeamertemplate{enumerate subsubitem}{\color{secondarycolor}\insertenumlabel.\insertsubenumlabel.\insertsubsubenumlabel}
+
+% Sections in ToC
+\setbeamertemplate{section in toc}{\color{primarycolor}\inserttocsectionnumber.~\inserttocsection}
+
+% Custom blocks
+\setbeamertemplate{block begin}{
+  \begin{beamercolorbox}[rounded=true,shadow=true,leftskip=1em,colsep*=.75ex]{block title}
+    \usebeamerfont{block title}\insertblocktitle
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[rounded=true,shadow=true,colsep*=.75ex,sep=.5ex,vmode]{block body}
+}
+\setbeamertemplate{block end}{
+  \end{beamercolorbox}
+  \vskip.5ex
+}
+
+% Alert blocks
+\setbeamertemplate{block alerted begin}{
+  \begin{beamercolorbox}[rounded=true,shadow=true,leftskip=1em,colsep*=.75ex]{block title alerted}
+    \usebeamerfont{block title alerted}\insertblocktitle
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[rounded=true,shadow=true,colsep*=.75ex,sep=.5ex,vmode]{block body alerted}
+}
+\setbeamertemplate{block alerted end}{
+  \end{beamercolorbox}
+  \vskip.5ex
+}
+
+% Example blocks
+\setbeamertemplate{block example begin}{
+  \begin{beamercolorbox}[rounded=true,shadow=true,leftskip=1em,colsep*=.75ex]{block title example}
+    \usebeamerfont{block title example}\insertblocktitle
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[rounded=true,shadow=true,colsep*=.75ex,sep=.5ex,vmode]{block body example}
+}
+\setbeamertemplate{block example end}{
+  \end{beamercolorbox}
+  \vskip.5ex
+}
+
+% Section pages
+\defbeamertemplate*{section page}{custom}[1][]{
+  \begin{centering}
+    \begin{beamercolorbox}[sep=8pt,center,#1]{part title}
+      \usebeamerfont{section title}\insertsection\par
+    \end{beamercolorbox}
+  \end{centering}
+}
+
+\mode<all>

@@ -1,0 +1,340 @@
+\documentclass{beamer}
+
+\makeatletter
+\def\input@path{{themes}}
+\makeatother
+
+\usetheme{custom}
+\usecolortheme{custom-minimal}
+
+% For code listings
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue},
+  commentstyle=\color{green!60!black},
+  stringstyle=\color{purple},
+  breaklines=true,
+  showstringspaces=false,
+  frame=single
+}
+
+%----------------------------------------
+% DOCUMENT BEGINS
+%----------------------------------------
+\title{Custom Theme LaTeX Presentation}
+\subtitle{Creating Professional Slides with Beamer}
+\author{Your Name}
+\institute{Your Institution}
+\date{\today}
+
+\begin{document}
+
+% Title slide
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% Outline slide
+\begin{frame}
+  \frametitle{Presentation Outline}
+  \tableofcontents
+\end{frame}
+
+%----------------------------------------
+% SECTION 1: INTRODUCTION
+%----------------------------------------
+\section{Introduction}
+
+\begin{frame}
+  \frametitle{Introduction}
+  
+  Welcome to this custom-themed \LaTeX{} presentation!
+  
+  \begin{itemize}
+    \item Beamer allows for professional presentations
+    \item Custom themes enhance visual appeal
+    \item This presentation demonstrates key features
+  \end{itemize}
+  
+  \begin{alertblock}{Important Note}
+    Customizing your presentation helps create a unique identity.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Benefits of \LaTeX{} Presentations}
+  
+  Why use \LaTeX{} for presentations?
+  
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \textbf{Technical Benefits}
+      \begin{itemize}
+        \item Precise control over formatting
+        \item Excellent math typesetting
+        \item Version control friendly
+        \item Consistent output across platforms
+      \end{itemize}
+    \end{column}
+    
+    \begin{column}{0.5\textwidth}
+      \textbf{Workflow Benefits}
+      \begin{itemize}
+        \item Focus on content, not formatting
+        \item Reusable components
+        \item Easily update and maintain
+        \item PDF output is universal
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%----------------------------------------
+% SECTION 2: KEY FEATURES
+%----------------------------------------
+\section{Key Features}
+
+\begin{frame}
+  \frametitle{Block Elements}
+  
+  Beamer provides various block elements:
+  
+  \begin{block}{Standard Block}
+    This is a standard block element.
+  \end{block}
+  
+  \begin{alertblock}{Alert Block}
+    Important information goes here!
+  \end{alertblock}
+  
+  \begin{exampleblock}{Example Block}
+    This is an example to illustrate the concept.
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Mathematical Typesetting}
+  
+  \LaTeX{} excels at mathematical notation:
+  
+  \begin{align}
+    E &= mc^2\\
+    F &= G\frac{m_1 m_2}{r^2}\\
+    \nabla \times \vec{B} &= \mu_0\vec{J} + \mu_0\epsilon_0\frac{\partial \vec{E}}{\partial t}
+  \end{align}
+  
+  Maxwell's equations in differential form:
+  \begin{align}
+    \nabla \cdot \vec{E} &= \frac{\rho}{\epsilon_0}\\
+    \nabla \cdot \vec{B} &= 0\\
+    \nabla \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t}\\
+    \nabla \times \vec{B} &= \mu_0\vec{J} + \mu_0\epsilon_0\frac{\partial \vec{E}}{\partial t}
+  \end{align}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Code Listings}
+  
+  \begin{block}{Python Example}
+    \begin{lstlisting}[language=Python]
+def fibonacci(n):
+    """Return the nth Fibonacci number."""
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+        
+# Calculate first 10 Fibonacci numbers
+for i in range(10):
+    print(fibonacci(i))
+    \end{lstlisting}
+  \end{block}
+\end{frame}
+
+%----------------------------------------
+% SECTION 3: VISUAL ELEMENTS
+%----------------------------------------
+\section{Visual Elements}
+
+\begin{frame}
+  \frametitle{Tables}
+  
+  \begin{table}
+    \centering
+    \begin{tabular}{|l|c|r|}
+      \hline
+      \textbf{Left Aligned} & \textbf{Center} & \textbf{Right Aligned} \\
+      \hline
+      Item 1 & Value 1 & \$10.00 \\
+      Item 2 & Value 2 & \$15.50 \\
+      Item 3 & Value 3 & \$20.25 \\
+      \hline
+    \end{tabular}
+    \caption{A simple table example}
+  \end{table}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Graphics with TikZ}
+  
+  \begin{center}
+    \begin{tikzpicture}
+      % Axes
+      \draw[thick,->] (0,0) -- (4.5,0) node[right] {$x$};
+      \draw[thick,->] (0,0) -- (0,4.5) node[above] {$y$};
+      
+      % Function
+      \draw[primarycolor, thick, domain=0:4, samples=100] plot (\x, {exp(-\x/2)*sin(deg(2*\x))});
+      
+      % Points
+      \foreach \x in {1,2,3,4}
+        \draw[fill=secondarycolor] (\x,{exp(-\x/2)*sin(deg(2*\x))}) circle (0.1);
+      
+      % Labels
+      \node[below left] at (0,0) {$O$};
+      \node[above] at (2, 1.5) {$f(x) = e^{-x/2}\sin(2x)$};
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Animation with Overlays}
+  
+  \begin{itemize}
+    \item<1-> This point appears on the first slide
+    \item<2-> This point appears on the second slide
+    \item<3-> This point appears on the third slide
+    \item<4-> This is the final point
+  \end{itemize}
+  
+  \only<1>{
+    \begin{alertblock}{First Step}
+      Start with the basics.
+    \end{alertblock}
+  }
+  
+  \only<2>{
+    \begin{alertblock}{Second Step}
+      Build on the foundation.
+    \end{alertblock}
+  }
+  
+  \only<3->{
+    \begin{alertblock}{Final Step}
+      Complete the process.
+    \end{alertblock}
+  }
+\end{frame}
+
+%----------------------------------------
+% SECTION 4: CUSTOMIZATION
+%----------------------------------------
+\section{Theme Customization}
+
+\begin{frame}
+  \frametitle{Customizing Your Theme}
+  
+  Key aspects to customize:
+  
+  \begin{enumerate}
+    \item Colors
+    \begin{itemize}
+      \item Primary, secondary, and accent colors
+      \item Background and text colors
+    \end{itemize}
+    
+    \item Fonts
+    \begin{itemize}
+      \item Sans-serif for headlines
+      \item Serif or sans-serif for body text
+    \end{itemize}
+    
+    \item Layout elements
+    \begin{itemize}
+      \item Headers and footers
+      \item Title page design
+      \item Block styling
+    \end{itemize}
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Color Palette Options}
+  
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Professional}
+        \begin{itemize}
+          \item Navy blue + Gray
+          \item Dark green + Beige
+          \item Burgundy + Light gray
+        \end{itemize}
+      \end{block}
+      
+      \begin{block}{Creative}
+        \begin{itemize}
+          \item Purple + Yellow
+          \item Teal + Coral
+          \item Orange + Blue
+        \end{itemize}
+      \end{block}
+    \end{column}
+    
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Academic}
+        \begin{itemize}
+          \item University colors
+          \item Subdued blue + White
+          \item Forest green + Ivory
+        \end{itemize}
+      \end{block}
+      
+      \begin{block}{Corporate}
+        \begin{itemize}
+          \item Brand colors
+          \item Black + Accent color
+          \item Grayscale + Highlight
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%----------------------------------------
+% SECTION 5: CONCLUSION
+%----------------------------------------
+\section{Conclusion}
+
+\begin{frame}
+  \frametitle{Summary}
+  
+  \begin{block}{Key Takeaways}
+    \begin{itemize}
+      \item \LaTeX{} Beamer provides professional presentation capabilities
+      \item Custom themes allow for unique, branded presentations
+      \item Advanced features include:
+        \begin{itemize}
+          \item Mathematical typesetting
+          \item Code listings
+          \item Tables and figures
+          \item Animations and overlays
+        \end{itemize}
+      \item Perfect for academic and technical presentations
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}[plain]
+  \centering
+  \vspace{2cm}
+  {\huge Thank You!}
+  
+  \vspace{1cm}
+  {\Large Questions?}
+  
+  \vspace{2cm}
+  {\ttfamily your.email@example.com}
+\end{frame}
+
+\end{document}
