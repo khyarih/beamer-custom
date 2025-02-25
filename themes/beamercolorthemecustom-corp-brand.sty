@@ -1,0 +1,49 @@
+% Corporate Brand Colors Theme
+% beamercolorthemecustom-corp-brand.sty
+
+\mode<presentation>
+
+% Define custom colors - Corporate Brand Blue
+\definecolor{primarycolor}{RGB}{0, 103, 177} % Corporate Blue
+\definecolor{secondarycolor}{RGB}{114, 159, 207} % Light Blue
+\definecolor{accentcolor}{RGB}{255, 127, 42} % Brand Orange Accent
+\definecolor{backgroundcolor}{RGB}{252, 252, 252} % Off White
+\definecolor{textcolor}{RGB}{44, 62, 80} % Dark Gray/Blue
+
+% Set basic colors
+\setbeamercolor{background canvas}{bg=backgroundcolor}
+\setbeamercolor{normal text}{fg=textcolor}
+\setbeamercolor{structure}{fg=primarycolor}
+
+% Title and header colors
+\setbeamercolor{title}{fg=primarycolor}
+\setbeamercolor{frametitle}{fg=primarycolor}
+\setbeamercolor{titlelike}{fg=primarycolor}
+
+% Block colors
+\setbeamercolor{block title}{bg=primarycolor, fg=white}
+\setbeamercolor{block body}{bg=white, fg=textcolor}
+
+% Alert block colors
+\setbeamercolor{block title alerted}{bg=accentcolor, fg=white}
+\setbeamercolor{block body alerted}{bg=white, fg=textcolor}
+
+% Example block colors
+\setbeamercolor{block title example}{bg=secondarycolor, fg=white}
+\setbeamercolor{block body example}{bg=white, fg=textcolor}
+
+% Items colors
+\setbeamercolor{alerted text}{fg=accentcolor}
+\setbeamercolor{itemize item}{fg=primarycolor}
+\setbeamercolor{itemize subitem}{fg=primarycolor}
+\setbeamercolor{itemize subsubitem}{fg=primarycolor}
+\setbeamercolor{enumerate item}{fg=primarycolor}
+\setbeamercolor{enumerate subitem}{fg=primarycolor}
+\setbeamercolor{enumerate subsubitem}{fg=primarycolor}
+
+% Button and other UI elements
+\setbeamercolor{button}{bg=accentcolor, fg=white}
+\setbeamercolor{section in toc}{fg=primarycolor}
+\setbeamercolor{subsection in toc}{fg=secondarycolor}
+
+\mode<all>
