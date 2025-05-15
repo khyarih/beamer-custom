@@ -2,72 +2,36 @@
 
 A professional, modern, and customizable theme for LaTeX Beamer presentations with multiple color palette options.
 
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+  <div style="flex: 1; min-width: 100px; max-width: 300px;">
+    <img src="doc/imgs/orange.png" alt="Orange theme"/>
+  </div>
+  <div style="flex: 1; min-width: 100px; max-width: 300px;">
+    <img src="doc/imgs/blue.png" alt="Blue theme"/>
+  </div>
+  <div style="flex: 1; min-width: 100px; max-width: 300px;">
+    <img src="doc/imgs/green.png" alt="Green theme"/>
+  </div>
+  <div style="flex: 1; min-width: 100px; max-width: 300px;">
+    <img src="doc/imgs/forest.png" alt="Forest theme"/>
+  </div>
+</div>
+
 ## Overview
 
 This Beamer theme provides:
 
 - Clean, professional design
 - Modular structure following Beamer conventions
-- 5 different color palettes for different presentation contexts
+- 15 different color palettes for different presentation contexts
 - Enhanced typography
 - Custom blocks, title page, and frame layouts
 - Support for code listings, math equations, and tables
 - Proper frame title formatting with accent line
 
-## Files and Structure
-
-### Core Theme Files
-
-- `beamerthemecustom.sty` - Main theme file that loads all components
-- `beamerinnerthemecustom.sty` - Inner elements (blocks, lists, title page)
-- `beamerouterthemecustom.sty` - Outer elements (frame titles, footers)
-- `beamerfontthemecustom.sty` - Typography settings
-- `beamercolorthemecustom.sty` - Default color scheme
-
-### Color Palette Variations
-
-- `beamercolorthemecustom.sty` - Default (Blue, Green, Purple)
-- `beamercolorthemecustom-alt.sty` - Earth tones (Teal, Terracotta, Amber)
-- `beamercolorthemecustom-modern.sty` - Vibrant (Indigo, Mint, Hot Pink)
-- `beamercolorthemecustom-corporate.sty` - Professional (Navy, Burgundy, Taupe)
-- `beamercolorthemecustom-minimal.sty` - Minimalist (Gray with Red accent)
-
 ### Example
 
 - `presentation.tex` - Example presentation demonstrating features
-
-## Installation
-
-### Option 1: Local Installation (Project-specific)
-
-1. Place all `.sty` files in the same directory as your presentation file.
-2. Use the theme in your document with `\usetheme{custom}`.
-
-### Option 2: Global Installation
-
-1. Locate your personal TeX tree (typically `~/texmf/`):
-
-   ```bash
-   kpsewhich -var-value=TEXMFHOME
-   ```
-
-2. Create the theme directory:
-
-   ```bash
-   mkdir -p $(kpsewhich -var-value=TEXMFHOME)/tex/latex/beamer/themes/theme/
-   ```
-
-3. Copy all `.sty` files to this directory:
-
-   ```bash
-   cp beamer*custom*.sty $(kpsewhich -var-value=TEXMFHOME)/tex/latex/beamer/themes/theme/
-   ```
-
-4. Update your TeX database:
-
-   ```bash
-   texhash $(kpsewhich -var-value=TEXMFHOME)
-   ```
 
 ## Usage
 
@@ -101,20 +65,31 @@ This Beamer theme provides:
 Choose from five color palettes by adding one of these commands after `\usetheme{custom}`:
 
 ```latex
-% Default theme (Blue, Green, Purple)
-% No additional command needed
+....
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Start Custom Theme Configuration
+% > Uncomment the desired theme below
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usecolortheme{custom-academic-blue}
+% \usecolortheme{custom-academic-forest}
+% \usecolortheme{custom-academic-uni}
+% \usecolortheme{custom-alt}
+% \usecolortheme{custom-corp-black}
+% \usecolortheme{custom-corp-brand}
+% \usecolortheme{custom-corporate}
+% \usecolortheme{custom-creative-orange}
+% \usecolortheme{custom-creative-purple}
+% \usecolortheme{custom-creative-teal}
+% \usecolortheme{custom-minimal}
+% \usecolortheme{custom-modern}
+% \usecolortheme{custom-pro-burgundy}
+% \usecolortheme{custom-pro-green}
+% \usecolortheme{custom-pro-navy}
 
-% Earth tones (Teal, Terracotta, Amber)
-\usecolortheme{custom-alt}
-
-% Modern vibrant (Indigo, Mint, Hot Pink)
-\usecolortheme{custom-modern}
-
-% Corporate (Navy, Burgundy, Taupe)
-\usecolortheme{custom-corporate}
-
-% Minimal (Gray with Red accent)
-\usecolortheme{custom-minimal}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End Custom Theme Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+....
 ```
 
 ### Code Listings
@@ -264,4 +239,4 @@ Ensure all theme files are in the correct location and that you're using `\useth
 
 ## License
 
-These theme files are provided under the [MIT License](https://opensource.org/licenses/MIT). You're free to use, modify, and distribute them for personal and commercial use.
+These theme files are provided under the [MIT License](LICENSE). You're free to use, modify, and distribute them for personal and commercial use.
